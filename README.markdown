@@ -7,8 +7,6 @@ You need to have FastCGI library for Ruby and FastCGI module for apache2 install
 
 ## public/.htaccess
 <pre>
-SetEnv RAILS_RELATIVE_URL_ROOT /rails3_fcgi
-
 Options +FollowSymLinks +ExecCGI
 
 RewriteEngine On
@@ -45,22 +43,4 @@ class Rack::PathInfoRewriter
 end
 
 Rack::Handler::FastCGI.run  Rack::PathInfoRewriter.new(Rails3Fcgi::Application)
-</pre>
-
-## config/routes.rb
-<pre>
-Rails3Fcgi::Application.routes.draw do
-  my_draw = Proc.new do
-    resources :entities
-    root :to => "entities#index"
-  end
-
-  if ENV['RAILS_RELATIVE_URL_ROOT']
-    scope ENV['RAILS_RELATIVE_URL_ROOT'] do
-      my_draw.call
-    end
-  else
-    my_draw.call
-  end
-end
 </pre>

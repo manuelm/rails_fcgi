@@ -1,5 +1,3 @@
-SetEnv RAILS_RELATIVE_URL_ROOT /rails3_fcgi
-
 Options +FollowSymLinks +ExecCGI
 
 RewriteEngine On
