@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Rails3Fcgi::Application.load_tasks
+RailsFcgi::Application.load_tasks

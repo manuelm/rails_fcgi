@@ -12,10 +12,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: Rails3Fcgi_development
+  database: usr_your_db_1
   pool: 5
-  username: root
-  password:
+  username: your_username
+  password: your_password
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -25,18 +25,18 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: Rails3Fcgi_test
+  database: usr_your_db_1
   pool: 5
-  username: root
-  password:
+  username: your_username
+  password: your_password
   host: localhost
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: Rails3Fcgi_production
+  database: usr_your_db_1
   pool: 5
-  username: root
-  password:
+  username: your_username
+  password: your_password
   host: localhost

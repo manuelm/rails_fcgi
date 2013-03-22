@@ -1,6 +1,6 @@
-# Rails3-FastCGI
+# Rails-FastCGI
 
-Simple Rails3 application configured to be deployed on apache2 with FastCGI
+Simple Rails application configured to be deployed on apache2 with FastCGI
 You need to have FastCGI library for Ruby and FastCGI module for apache2 installed.
 
 # Files of interest:
@@ -19,10 +19,10 @@ RewriteRule ^$ index.html [QSA]
 RewriteRule ^([^.]+)$ $1.html [QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^(.*)$ rails3_fcgi.fcgi [E=X-HTTP_AUTHORIZATION:%{HTTP:Authorization},QSA,L]
+RewriteRule ^(.*)$ rails_fcgi.fcgi [E=X-HTTP_AUTHORIZATION:%{HTTP:Authorization},QSA,L]
 </pre>
 
-## public/rails3_fcgi.fcgi
+## public/rails_fcgi.fcgi
 <pre>
 #!/usr/bin/ruby
 
@@ -42,5 +42,5 @@ class Rack::PathInfoRewriter
   end
 end
 
-Rack::Handler::FastCGI.run  Rack::PathInfoRewriter.new(Rails3Fcgi::Application)
+Rack::Handler::FastCGI.run  Rack::PathInfoRewriter.new(RailsFcgi::Application)
 </pre>

@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-Rails3Fcgi::Application.config.session_store :cookie_store, key: '_Rails3Fcgi_session'
+RailsFcgi::Application.config.session_store :cookie_store, key: '_RailsFcgi_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# Rails3Fcgi::Application.config.session_store :active_record_store
+# RailsFcgi::Application.config.session_store :active_record_store
