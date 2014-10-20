@@ -1,6 +1,6 @@
-# Load the rails application
+# Load the Rails application.
 #ENV['RAILS_ENV'] ||= 'production'
 require File.expand_path('../application', __FILE__)
 
-# Initialize the rails application
-RailsFcgi::Application.initialize!
+# Initialize the Rails application.
+Rails.application.initialize!

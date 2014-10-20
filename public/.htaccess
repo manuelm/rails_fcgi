@@ -1,4 +1,4 @@
-Options +FollowSymLinks +ExecCGI
+Options +SymLinksIfOwnerMatch +ExecCGI
 
 RewriteEngine On
 
